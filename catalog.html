@@ -108,10 +108,12 @@
         </fieldset>
         <fieldset class="price-range">
           <legend class="price-range-title">Стоимость, ₽:</legend>
-          <label class="price-min" for="min">От
+          <label class="price-min" for="min">
+            <span class="price-range-label">От</span>
             <input class="price-min-input" type="text" id="min" name="min-price" value="0">
           </label>
-          <label class="price-max" for="max">До
+          <label class="price-max" for="max">
+            <span class="price-range-label">До</span>
             <input class="price-max-input" type="text" id="max" name="max-price" value="9000">
           </label>
           <input class="price-range-bar" type="range" min="1" max="10" value="8">
@@ -145,56 +147,56 @@
         </li>
       </ul>
       <ul class="card-list">
+        <a class="card-link" href="#">
           <img class="card-image" src="images/amara_resort.jpg" width="300" height="212" alt="Amara Resort & Spa picture">
-          <a class="card-link" href="#">
             <h3 class="card-title">Amara Resort & Spa</h3>
           </a>
           <p class="card-hotel">Гостиница</p>
           <p class="card-price">От 4000 ₽</p>
           <a class="card-details" href="#">Подробнее</a>
-          <button class="card-favorite">В избранное</button>
+          <button class="card-favorite" type="button">В избранное</button>
           <p class="stars four-stars">
             <span class="visually-hidden">Отель 4 звезды</span>
           </p>
           <p class="card-rating">Рейтинг: 8,5</p>
         </li>
         <li class="card-item">
-          <img class="card-image" src="images/villas_at_poco_diablo.jpg" width="300" height="212" alt="Villas at Poco Diablo picture">
           <a class="card-link" href="#">
+          <img class="card-image" src="images/villas_at_poco_diablo.jpg" width="300" height="212" alt="Villas at Poco Diablo picture">
             <h3 class="card-title">Villas at Poco Diablo</h3>
           </a>
           <p class="card-hotel">Гостиница</p>
           <p class="card-price">От 5000 ₽</p>
           <a class="card-details" href="#">Подробнее</a>
-          <button class="card-favorite">В избранное</button>
+          <button class="card-favorite" type="button">В избранное</button>
           <p class="stars four-stars">
             <span class="visually-hidden">Отель 4 звезды</span>
           </p>
           <p class="card-rating">Рейтинг: 9,2</p>
         </li>
         <li class="card-item">
-          <img class="card-image" src="images/desert_quail_inn.jpg" width="300" height="212" alt="Desert Quail Inn picture">
           <a class="card-link" href="#">
+          <img class="card-image" src="images/desert_quail_inn.jpg" width="300" height="212" alt="Desert Quail Inn picture">
             <h3 class="card-title">Desert Quail Inn</h3>
           </a>
           <p class="card-hotel">Гостиница</p>
           <p class="card-price">От 2500 ₽</p>
           <a class="card-details" href="#">Подробнее</a>
-          <button class="card-favorite">В избранное</button>
+          <button class="card-favorite" type="button">В избранное</button>
           <p class="stars three-stars">
             <span class="visually-hidden">Отель 3 звезды</span>
           </p>
           <p class="card-rating">Рейтинг: 6,9</p>
         </li>
         <li class="card-item">
-          <img class="card-image" src="images/greenTree_inn.jpg" width="300" height="212" alt="GreenTree Inn picture">
           <a class="card-link" href="#">
+          <img class="card-image" src="images/green_tree_inn.jpg" width="300" height="212" alt="GreenTree Inn picture">
             <h3 class="card-title">GreenTree Inn</h3>
           </a>
           <p class="card-hotel">Гостиница</p>
           <p class="card-price">От 1500 ₽</p>
           <a class="card-details" href="#">Подробнее</a>
-          <button class="card-favorite">В избранное</button>
+          <button class="card-favorite" type="button">В избранное</button>
           <p class="stars two-stars">
             <span class="visually-hidden">Отель 2 звезды</span>
           </p>
@@ -203,7 +205,7 @@
       </ul>
       <ul class="pagination">
         <li class="pagination-item">
-          <a class="pagination-link" href="#">1</a>
+          <a class="pagination-link">1</a>
         </li>
         <li class="pagination-item">
           <a class="pagination-link" href="#">2</a>
@@ -236,23 +238,21 @@
     <ul class="social-list">
       <li class="social-item">
         <a class="social-link" href="https://vk.com/htmlacademy">
-          <img src="#" alt="картинка логотипа вконтакте">
+
         </a>
       </li>
       <li class="social-item">
         <a class="social-link" href="https://t.me/htmlacademy">
-          <img class="visually-hidden" src="#" alt="картинка логотипа Телеграм">
         </a>
       </li>
       <li class="social-item">
         <a class="social-link" href="https://www.youtube.com/user/htmlacademyru">
-          <img class="visually-hidden" src="#" alt="картинка логотипа YouTube">
         </a>
       </li>
     </ul>
     <a class="phone-number" href="tel:+78128121212">+7 (812) 812-12-12</a>
     <a class="author-logo" href="https://htmlacademy.ru">
-      <img class="academy-logo visually-hidden" src="#" alt="Логотип html academy">
+      <img class="academy-logo" src="#" alt="Логотип html academy">
     </a>
   </footer>
 </body>
