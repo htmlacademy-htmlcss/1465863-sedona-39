@@ -1,0 +1,165 @@
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../fonts/ptsans-400.woff2) format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  src: url(../fonts/ptsans-700.woff2) format("woff2");
+  font-display: swap;
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  /* Какой цвет задать тексту и фону */
+  color: rgba(51, 51, 51, 1);
+  background: rgba(255, 255, 255, 1);
+}
+
+.page-header {
+  color: rgba(0, 0, 0, 1);
+  background: rgba(255, 255, 255, 1);
+
+}
+
+.navigation-link {
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+  text-align: center;
+}
+
+.hero {
+  color: #000000;
+  background-color: #ffffff;
+  background-image: url(../images/hero_background.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.advantages-main-title,
+.invitation-title,
+.interested-title {
+  color: rgba(0, 0, 0, 1);
+  font-size: 30px;
+  line-height: 36px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-main-description,
+.invitation-description,
+.interested-description {
+  color: rgba(51, 51, 51, 1);
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.advantages-item-title,
+.experience-item-title
+{
+  color: rgba(0, 0, 0, 1);
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.advantages-item-description,
+.experience-item-description {
+  text-align: center;
+}
+
+.side-title,
+.side-description {
+  color: rgba(255, 255, 255, 1);
+  background: rgba(130, 179, 211, 1);
+
+}
+
+/* Стилизация кнопки "Поиск гостиницы в Седоне" */
+.interested-link  {
+  text-align: center;
+  background: rgba(117, 97, 87, 1);
+  width: 276px;
+  height: 36px;
+}
+
+.interested a {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 1);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.subscribe {
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  background-color: #000000;
+  background-image: url(../images/subscribe_backgrouns.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.subscribe-title {
+  font-size: 30px;
+  line-height: 36px;
+  text-transform: uppercase;
+}
+
+.subscribe-description {
+  font-size: 22px;
+  line-height: 26px;
+}
+
+/* Стилизация кнопки "Подписаться" */
+.subscribe-button {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  color: rgba(255, 255, 255, 1);
+  background: rgba(130, 179, 211, 1);
+  width: 232px;
+  height: 52px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.phone-number {
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
+  text-decoration: none;
+}
+
+.academy-logo {
+
+}
+
+/* Catalog page *****************************************************************************************************************/
+.main-inner-filter {
+  color: rgba(255, 255, 255, 1);
+  background-color: #000000;
+  background-image: url(../images/filter_background.jpg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+
+.inner-title {
+  font-size: 60px;
+  line-height: 78px;
+}
