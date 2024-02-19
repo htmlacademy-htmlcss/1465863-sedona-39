@@ -15,6 +15,7 @@
 }
 
 body {
+  margin-top: 0;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
@@ -24,6 +25,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
+  width: 1200px;
   background-color: #ffffff;
 }
 
@@ -62,6 +64,16 @@ body {
   background-repeat: no-repeat;
 }
 
+.hero-image {
+  display: block;
+  margin: 0 auto;
+  padding-top: 51px;
+}
+
+.hero-divider {
+  display: block;
+}
+
 .common-title {
   color: #000000;
   font-size: 30px;
@@ -90,6 +102,10 @@ body {
 }
 
 /* advantages item decoration */
+.advantages-list {
+  list-style: none;
+}
+
 .side-title {
   color: #ffffff;
 }
@@ -116,6 +132,10 @@ body {
   background: #82B3D3;
 }
 
+/* experience item description */
+.experience-list {
+  list-style: none;
+}
 .experience-item {
   background: rgba(131, 179, 211, 0.12);
 }
@@ -176,6 +196,8 @@ body {
   color: #000000;
   text-decoration: none;
 }
+
+/* Social networks */
 
 .vkontakte {
   background-image: url(../images/vkontakte.svg);
