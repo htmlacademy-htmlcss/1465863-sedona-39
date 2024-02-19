@@ -18,99 +18,131 @@ body {
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
-  /* Какой цвет задать тексту и фону */
-  color: rgba(51, 51, 51, 1);
-  background: rgba(255, 255, 255, 1);
+  color: #333333;
+  background: #F2F2F2;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-color: #ffffff;
 }
 
 .page-header {
-  color: rgba(0, 0, 0, 1);
-  background: rgba(255, 255, 255, 1);
-
+  color: #000000;
+  background: #ffffff;
 }
 
 .navigation-link {
-  font-family: "PT Sans", sans-serif;
+  font-family: inherit;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   text-decoration: none;
   text-align: center;
 }
 
+.link-button {
+  text-align: center;
+  background: #756157;
+  padding: 8px 34px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 .hero {
   color: #000000;
-  background-color: #ffffff;
+  background-color: #D7E5F0;
   background-image: url(../images/hero_background.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
-.advantages-main-title,
-.invitation-title,
-.interested-title {
-  color: rgba(0, 0, 0, 1);
+.common-title {
+  color: #000000;
   font-size: 30px;
   line-height: 36px;
   text-align: center;
   text-transform: uppercase;
 }
 
-.advantages-main-description,
-.invitation-description,
-.interested-description {
-  color: rgba(51, 51, 51, 1);
+.common-description {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
 }
 
-.advantages-item-title,
-.experience-item-title
+.advantages-common-title
 {
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   font-size: 24px;
   line-height: 28px;
   text-align: center;
   text-transform: uppercase;
 }
 
-.advantages-item-description,
-.experience-item-description {
+.advantages-common-description {
   text-align: center;
 }
 
-.side-title,
-.side-description {
-  color: rgba(255, 255, 255, 1);
-  background: rgba(130, 179, 211, 1);
+/* advantages item decoration */
+.side-title {
+  color: #ffffff;
+}
 
+.real-town {
+  color: #ffffff;
+  background: #82B3D3;
+}
+
+.little-area {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.beautiful-road {
+  background: rgba(131, 179, 211, 0.2);
+}
+
+.few-turist {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.devils-bridge {
+  color: #ffffff;
+  background: #82B3D3;
+}
+
+.experience-item {
+  background: rgba(131, 179, 211, 0.12);
+}
+
+.food {
+  background:#ffffff;
 }
 
 /* Стилизация кнопки "Поиск гостиницы в Седоне" */
 .interested-link  {
   text-align: center;
-  background: rgba(117, 97, 87, 1);
-  width: 276px;
-  height: 36px;
-}
-
-.interested a {
+  background: #756157;
+  padding: 8px 50px;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: rgba(255, 255, 255, 1);
+  color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
 }
 
 .subscribe {
   text-align: center;
-  color: rgba(255, 255, 255, 1);
-  background-color: #000000;
+  color: #ffffff;
+  background-color: #37729B;
   background-image: url(../images/subscribe_backgrouns.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -125,15 +157,14 @@ body {
   line-height: 26px;
 }
 
-/* Стилизация кнопки "Подписаться" */
-.subscribe-button {
+/* Стилизация кнопок "Подписаться" и "Применить" */
+.blue-button {
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  color: rgba(255, 255, 255, 1);
-  background: rgba(130, 179, 211, 1);
-  width: 232px;
-  height: 52px;
+  color: #ffffff;
+  background: #82B3D3;
+  padding: 8px 50px;
   border: none;
   text-transform: uppercase;
 }
@@ -142,24 +173,125 @@ body {
   font-size: 40px;
   line-height: 40px;
   text-align: center;
-  color: rgba(0, 0, 0, 1);
+  color: #000000;
   text-decoration: none;
 }
 
-.academy-logo {
-
+.vkontakte {
+  background-image: url(../images/vkontakte.svg);
+  background-repeat: no-repeat;
 }
+
+.telegram {
+  background-image: url(../images/telegram.svg);
+  background-repeat: no-repeat;
+}
+
+.youtube {
+  background-image: url(../images/youtube.svg);
+  background-repeat: no-repeat;
+}
+
 
 /* Catalog page *****************************************************************************************************************/
 .main-inner-filter {
-  color: rgba(255, 255, 255, 1);
-  background-color: #000000;
+  color: #ffffff;
+  background-color: #5A768E;
   background-image: url(../images/filter_background.jpg);
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .inner-title {
   font-size: 60px;
   line-height: 78px;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+}
+
+.catalog-filter-title {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.controls {
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.search-title {
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #000000;
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.button-decoration{
+  text-decoration: none;
+  color: white;
+  padding: 8px 26px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: #756157;
+}
+
+.card-favorite {
+  background: #82B3D3;
+  border: none;
+}
+
+.card-favorite-villas {
+  background: #7DB54F;
+}
+
+.card-rating {
+  text-transform: uppercase;
+  background: #F2F2F2;
+  padding: 9px 22px 8px 23px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.pagination-link {
+  text-decoration: none;
+  color: #ffffff;
+  background: #82B3D3;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  padding: 12px 25px 13px 24px;
+  border-radius: 10%;
+}
+
+
+.pagination-link-current {
+  color: #000000;
+  background: #F2F2F2;
+}
+
+.suspension-point {
+  font-size: 22px;
+  line-height: 26px;
+  padding: 16px 22px 18px 22px;
+}
+
+.pagination-two-digits {
+  padding: 11px 19px;
 }
