@@ -177,15 +177,30 @@ body {
   line-height: 26px;
 }
 
+/* email-field decoration */
+.email {
+  min-width: 452px;
+  min-height: 52px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: 24px;
+  border: none;
+  border-radius: 4px;
+
+}
+
+
 /* Стилизация кнопок "Подписаться" и "Применить" */
 .blue-button {
+  min-height: 52px;
   font-weight: 700;
-  font-size: 20px;
-  line-height: 36px;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
   background: #82B3D3;
   padding: 8px 50px;
   border: none;
+  border-radius: 4px;
   text-transform: uppercase;
 }
 
@@ -252,6 +267,17 @@ body {
   text-transform: uppercase;
 }
 
+/* Reset button decoration */
+.reset-button {
+  border: none;
+  background: none;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 .card-title {
   font-size: 24px;
   line-height: 28px;
@@ -291,15 +317,44 @@ body {
   line-height: 20px;
 }
 
+/* Rating stars */
+.four-stars {
+  background-image: url(../images/star.svg),
+                    url(../images/star.svg),
+                    url(../images/star.svg),
+                    url(../images/star.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-position: left 50%, 24px 50%, 48px 50%, 72px 50%;
+}
+
+.three-stars {
+  background-image: url(../images/star.svg),
+                    url(../images/star.svg),
+                    url(../images/star.svg);
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-position: left 50%, 24px 50%, 48px 50%;
+}
+
+.two-stars {
+  background-image: url(../images/star.svg),
+                    url(../images/star.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 50%, 24px 50%;
+}
+
 .pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-decoration: none;
   color: #ffffff;
   background: #82B3D3;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
-  padding: 12px 25px 13px 24px;
-  border-radius: 10%;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
 }
 
 
@@ -309,11 +364,27 @@ body {
 }
 
 .suspension-point {
-  font-size: 22px;
-  line-height: 26px;
-  padding: 16px 22px 18px 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 36px;
+  border-radius: 4px;
+  width: 60px;
+  height: 60px;
 }
 
-.pagination-two-digits {
-  padding: 11px 19px;
+.subscribe-catalog {
+  background-color:#ffffff;
+  background-image: none;
+}
+
+.subscribe-catalog-text {
+  color: #000000;
+}
+
+.catalog-email {
+  background: #F2F2F2;
 }

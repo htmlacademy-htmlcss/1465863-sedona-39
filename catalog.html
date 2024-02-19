@@ -123,7 +123,7 @@
                 </label>
                 <input class="price-range-bar" type="range" min="1" max="10" value="8">
                 <button class="filter-button blue-button" type="submit">Применить</button>
-                <button class="filter-button" type="reset">Сбросить</button>
+                <button class="filter-button reset-button" type="reset">Сбросить</button>
               </fieldset>
             </form>
           </section>
@@ -230,16 +230,16 @@
               <span class="suspension-point">...</span>
             </li>
             <li class="pagination-item">
-              <a class="pagination-link pagination-two-digits" href="#">10</a>
+              <a class="pagination-link" href="#">10000</a>
             </li>
           </ul>
         </section>
         <section class="subscribe subscribe-catalog" data-test="subscribe">
-          <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-          <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+          <h2 class="subscribe-title subscribe-catalog-text">Подпишитесь на рассылку</h2>
+          <p class="subscribe-description subscribe-catalog-text">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
             <label for="subscribe-email"></label>
-            <input type="email" id="subscribe-email" name="user-email" placeholder="Ваш e-mail">
+            <input class=" email catalog-email" type="email" id="subscribe-email" name="user-email" placeholder="Ваш e-mail" required>
             <button class="subscribe-button blue-button" type="submit">Подписаться</button>
           </form>
         </section>
