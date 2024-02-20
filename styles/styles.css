@@ -58,10 +58,11 @@ body {
 
 .hero {
   color: #000000;
-  background-color: #D7E5F0;
-  background-image: url(../images/hero_background.jpg);
-  background-size: cover;
+  background-color: #D7BDB0;
+  background-image: url(../images/divider.svg), url(../images/hero_background.jpg); 
+  background-size: 100% auto, cover;
   background-repeat: no-repeat;
+  background-position: left bottom, left top;
 }
 
 .hero-image {
@@ -349,6 +350,7 @@ body {
   text-decoration: none;
   color: #ffffff;
   background: #82B3D3;
+  padding: auto;
   font-weight: 700;
   font-size: 20px;
   line-height: 36px;
@@ -388,3 +390,4 @@ body {
 .catalog-email {
   background: #F2F2F2;
 }
+
