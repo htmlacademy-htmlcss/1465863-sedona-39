@@ -27,6 +27,7 @@ body {
   margin: 0 auto;
   width: 1200px;
   background-color: #ffffff;
+  box-shadow: rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
@@ -44,6 +45,16 @@ body {
   text-align: center;
 }
 
+.like-number {
+  color: #ffffff;
+  background-color: #7DB54F;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
 .link-button {
   text-align: center;
   background: #756157;
@@ -59,20 +70,16 @@ body {
 .hero {
   color: #000000;
   background-color: #D7BDB0;
-  background-image: url(../images/divider.svg), url(../images/hero_background.jpg); 
+  background-image: url(../images/divider.svg), url(../images/hero_background.jpg);
   background-size: 100% auto, cover;
   background-repeat: no-repeat;
-  background-position: left bottom, left top;
+  background-position: center bottom, center center;
 }
 
 .hero-image {
   display: block;
   margin: 0 auto;
   padding-top: 51px;
-}
-
-.hero-divider {
-  display: block;
 }
 
 .common-title {
@@ -180,8 +187,9 @@ body {
 
 /* email-field decoration */
 .email {
-  min-width: 452px;
-  min-height: 52px;
+  box-sizing: border-box;
+  max-width: 452px;
+  padding: 14px 345px 14px 20px  ;
   font-family: inherit;
   font-size: inherit;
   line-height: 24px;
@@ -193,6 +201,7 @@ body {
 
 /* Стилизация кнопок "Подписаться" и "Применить" */
 .blue-button {
+  font-family: inherit;
   min-height: 52px;
   font-weight: 700;
   font-size: 16px;
@@ -266,6 +275,16 @@ body {
   font-weight: 700;
   color: #000000;
   text-transform: uppercase;
+}
+
+.search-control {
+  font-family: inherit;
+  padding: 14px 131px 14px 20px;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: normal;
+  border: 2px solid #E5E5E5;
+  border-radius: 4px;
 }
 
 /* Reset button decoration */
@@ -355,7 +374,7 @@ body {
   font-size: 20px;
   line-height: 36px;
   border-radius: 4px;
-  width: 60px;
+  max-width: 60px;
   height: 60px;
 }
 
@@ -390,4 +409,3 @@ body {
 .catalog-email {
   background: #F2F2F2;
 }
-
