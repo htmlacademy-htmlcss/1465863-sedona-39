@@ -14,23 +14,32 @@
   font-display: swap;
 }
 
+html {
+  height: 100%;
+}
+
 body {
-  margin-top: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   line-height: 21px;
   color: #333333;
   background: #F2F2F2;
+  box-sizing: border-box;
 }
 
 .wrapper {
   margin: 0 auto;
   width: 1200px;
   background-color: #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
 }
 
 .page-header {
+  padding: 0 70px;
   color: #000000;
   background: #ffffff;
 }
@@ -43,6 +52,24 @@ body {
   color: #000000;
   text-decoration: none;
   text-align: center;
+}
+
+.navigation {
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 339px;
+}
+
+.navigation-user {
+  max-width: 268px;
+  margin-left: auto;
 }
 
 .like-number {
@@ -65,6 +92,11 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 4px;
+}
+
+.main-container {
+  flex-grow: 1;
 }
 
 .hero {
@@ -80,6 +112,11 @@ body {
   display: block;
   margin: 0 auto;
   padding-top: 51px;
+}
+
+.advantages-main-title{
+  width: 620px;
+  margin: 0 auto;
 }
 
 .common-title {
@@ -111,7 +148,24 @@ body {
 
 /* advantages item decoration */
 .advantages-list {
+  padding: 0;
+  display: flex;
+   flex-wrap: wrap;
   list-style: none;
+}
+
+.advantages-item {
+  display: flex;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Ничего лучше не придумал, кроме как подкласс дописать (верно/не верно), как лучше? !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.sub-advantages {
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  align-items: center;
+  justify-content: center;
+
 }
 
 .side-title {
@@ -136,12 +190,20 @@ body {
 }
 
 .devils-bridge {
+  order: 1;
   color: #ffffff;
   background: #82B3D3;
 }
 
+.invitation-title {
+  width: 505px;
+  margin: 0 auto;
+}
+
 /* experience item description */
 .experience-list {
+  display: flex;
+  padding: 0;
   list-style: none;
 }
 .experience-item {
@@ -150,6 +212,12 @@ body {
 
 .food {
   background:#ffffff;
+}
+
+.interested {
+  width: 592px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 /* Стилизация кнопки "Поиск гостиницы в Седоне" */
@@ -195,7 +263,6 @@ body {
   line-height: 24px;
   border: none;
   border-radius: 4px;
-
 }
 
 
@@ -212,6 +279,15 @@ body {
   border: none;
   border-radius: 4px;
   text-transform: uppercase;
+}
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! С добавлением display: flex иконки соц. сетей изчезают Взгялни пожалуйста !!!!!!!!!!!!!!!!!!!!!!!!!!!! */
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  width: 1060px;
 }
 
 .phone-number {
@@ -242,6 +318,7 @@ body {
 
 /* Catalog page *****************************************************************************************************************/
 .main-inner-filter {
+  padding: 0 70px;
   color: #ffffff;
   background-color: #5A768E;
   background-image: url(../images/filter_background.jpg);
@@ -249,14 +326,43 @@ body {
   background-repeat: no-repeat;
 }
 
+.catalog-content-wrapper {
+ padding: 0 70px;
+}
+
 .inner-title {
+  margin: 0;
   font-size: 60px;
   line-height: 78px;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  list-style: none;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
 }
+
+.catalog-filter{
+  display: flex;
+  width: 1060px;
+  margin: 0 auto;
+}
+
+.price-range{
+  width: 288px;
+}
+
+
+.price-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  justify-content: space-around;
+}
+
 
 .catalog-filter-title {
   font-size: 20px;
@@ -264,9 +370,26 @@ body {
   font-weight: 700;
 }
 
+.catalog-filter-list {
+  list-style: none;
+  padding: 0;
+  width: 150px;
+}
+
 .controls {
   font-size: 18px;
   line-height: 23px;
+}
+
+.catalog-content-title {
+  display: flex;
+  align-items: center;
+}
+
+.preview-list {
+  display: flex;
+  margin-left: auto;
+  list-style: none;
 }
 
 .search-title {
@@ -296,6 +419,23 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
+}
+
+.card-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  gap: 20px;
+}
+
+.card-item {
+  width: 340px;
+  border: 1px solid #E6E6E6;
+  border-radius: 4px;
+  padding: 20px;
+  /* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Перестают влезать кнопки после использования box-sizing: border-box, не хотелось бы оборачивать их в отдельный контейнер !!!!!!!!!!!!!!! */
+  box-sizing: border-box;
 }
 
 .card-title {
