@@ -105,12 +105,26 @@ img {
 }
 
 .heart {
+  position: relative;
   background-image: url(../images/heart.svg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   cursor: pointer;
   width: 20px;
   height: 20px;
+}
+
+.like-number {
+  position: absolute;
+  top: 10px;
+  left: 25px;
+  color: #ffffff;
+  background-color: #7DB54F;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 10px;
+  padding: 5px;
+  border-radius: 50%;
 }
 
 .visually-hidden {
@@ -127,15 +141,6 @@ img {
   overflow: hidden;
 }
 
-.like-number {
-  color: #ffffff;
-  background-color: #7DB54F;
-  font-weight: normal;
-  font-size: 10px;
-  line-height: 10px;
-  padding: 5px;
-  border-radius: 50%;
-}
 
 .link-button {
   text-align: center;
@@ -591,34 +596,78 @@ img {
   color: #ffffff;
 }
 
-.card-list {
+/* Карточки на флексах */
+/* .card-list {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
   list-style: none;
   gap: 20px;
+} */
+
+/* Карточки на гридах */
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  list-style: none;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
-.card-item {
+/* карточка на флексах */
+ .card-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 340px;
-  border: 1px solid #E6E6E6;
+  box-shadow: 0 0 0 1px #e6e6e6;
   border-radius: 4px;
   padding: 20px;
   box-sizing: border-box;
 }
 
+/* Карточка на гридах */
+.card-item {
+  display: grid;
+  grid-template-columns: repeat(2, 140px);
+  margin: 0;
+  gap: 16px 20px;
+  box-sizing: border-box;
+  width: 340px;
+  box-shadow: 0 0 0 1px #e6e6e6;
+  padding: 20px;
+  border-radius: 4px;
+}
+
+
 .card-title {
+  margin-bottom: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   color: #000000;
 }
 
+.card-price {
+  margin: 0;
+  text-align: right;
+}
+
+.card-hotel {
+  margin: 0;
+}
+
 .card-link {
+  grid-column: 1 / -1;
   text-decoration: none;
 }
 
 .button-decoration {
+  box-sizing: border-box;
+  width: 140px;
   text-decoration: none;
   color: white;
   padding: 8px 26px;
@@ -668,6 +717,7 @@ img {
 
 /* Rating stars */
 .stars {
+  margin: 0;
   width: 140px;
   height: 17px;
 }
