@@ -60,6 +60,12 @@ img {
   text-align: center;
 }
 
+.navigation-link-selected {
+  text-decoration: underline;
+  text-decoration-color:  #756257;
+  text-underline-offset: 24px;
+}
+
 .navigation {
   display: flex;
   position: relative;
@@ -205,6 +211,21 @@ img {
   text-align: center;
   text-transform: uppercase;
 }
+
+.advantages-item-title::after {
+  content: "";
+  display: block;
+  margin: auto;
+  margin-top: 30px;
+  width: 60px;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.side-title::after {
+  background: rgba(255, 255, 255, 0.3);
+}
+
 
 .advantages-common-description {
   text-align: center;
@@ -461,7 +482,7 @@ img {
 
 /* Catalog page *****************************************************************************************************************/
 .main-inner-filter {
-  padding: 0 70px;
+  padding: 35px 70px 70px;
   color: #ffffff;
   background-color: #5A768E;
   background-image: url(../images/filter_background.jpg);
@@ -475,8 +496,28 @@ img {
 
 .inner-title {
   margin: 0;
+  margin-bottom: 8px;
   font-size: 60px;
   line-height: 78px;
+}
+
+.breadcrumbs-list {
+  margin: 0;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  gap: 11px;
+  align-items: center;
+  list-style: none;
+}
+
+.breadcrumbs-home {
+  background-image: url(../images/breadcrumbs-home.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 13px;
+  height: 15px;
 }
 
 .breadcrumbs-list {
@@ -490,11 +531,24 @@ img {
 
 .catalog-filter {
   display: flex;
+  flex-wrap: wrap;
   width: 1060px;
   margin: 0 auto;
 }
 
+.catalog-filter-group {
+  padding: 0;
+  margin-right: 70px;
+  min-width: 150px;
+  border: none;
+}
+
 .price-range {
+  margin: 0;
+  margin-left: 70px;
+  /* Раскоментировать после стилизация полей ввода */
+  /* margin-right: 70px; */
+  border: none;
   width: 288px;
 }
 
@@ -508,6 +562,7 @@ img {
 
 
 .catalog-filter-title {
+  margin-bottom: 32px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -515,8 +570,17 @@ img {
 
 .catalog-filter-list {
   list-style: none;
+  margin: 0;
   padding: 0;
   width: 150px;
+}
+
+.catalog-filter-item {
+  margin-bottom: 16px;
+}
+
+.catalog-filter-item:last-child{
+  margin-bottom: 0;
 }
 
 .controls {
@@ -718,6 +782,7 @@ img {
 /* Rating stars */
 .stars {
   margin: 0;
+  align-self: center;
   width: 140px;
   height: 17px;
 }
