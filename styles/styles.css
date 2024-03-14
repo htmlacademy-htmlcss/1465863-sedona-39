@@ -77,6 +77,8 @@ img {
   display: block;
   position: absolute;
   cursor: pointer;
+  top: 0;
+  left: 0;
 }
 
 .navigation-list {
@@ -86,44 +88,60 @@ img {
   padding: 0;
   margin: 0;
   padding-left: 168px;
-  flex-grow: 1;
 }
 
 .navigation-user {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   margin: 0;
+  padding: 0;
   max-width: 296px;
   margin-left: auto;
+  list-style: none;
 }
+
 
 .navigation-item {
   margin: 0;
   padding: 20px 16px;
 }
 
+.navigation-user-item {
+  max-height: 64px;
+  max-width: 44px;
+}
+
+.navigation-user-link {
+  padding: 22px 12px;
+}
+
 .magnifier {
   background-image: url(../images/magnifier.svg);
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center;
   cursor: pointer;
+  display: inline-block;
   width: 20px;
   height: 20px;
 }
+
 
 .heart {
   position: relative;
   background-image: url(../images/heart.svg);
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: center;
   cursor: pointer;
+  display: inline-block;
   width: 20px;
   height: 20px;
 }
 
 .like-number {
   position: absolute;
-  top: 10px;
-  left: 25px;
+  top: 12px;
+  left: 20px;
   color: #ffffff;
   background-color: #7DB54F;
   font-weight: normal;
@@ -187,6 +205,20 @@ img {
   margin: 0 auto;
 }
 
+.advantages-main-title {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.advantages-main-description {
+  margin: 0;
+  margin-bottom: 21px;
+}
+
+.button-want {
+  padding: 20px;
+  padding-right: 0;
+}
 
 .common-title {
   color: #000000;
@@ -204,6 +236,7 @@ img {
 
 .advantages-common-title {
   margin: 0 auto;
+  margin-bottom: 30px;
   max-width: 175px;
   color: #000000;
   font-size: 24px;
@@ -226,9 +259,15 @@ img {
   background: rgba(255, 255, 255, 0.3);
 }
 
+.advantages-item-image {
+  display: block;
+  object-fit: cover;
+  height: 100%;
+}
 
 .advantages-common-description {
   text-align: center;
+  margin: 0 auto;
 }
 
 
@@ -262,7 +301,7 @@ img {
   flex-wrap: wrap;
   width: 400px;
   box-sizing: border-box;
-  padding: 113px 85px;
+  padding: 112px 85px;
   list-style: none;
 }
 
@@ -295,6 +334,7 @@ img {
 .invitation-title {
   width: 505px;
   margin: 0 auto;
+  margin-bottom: 20px;
 }
 
 .invitation-wrap {
@@ -305,6 +345,7 @@ img {
 .experience-list {
   display: flex;
   flex-wrap: wrap;
+  margin: 0;
   padding: 0;
   list-style: none;
 }
@@ -342,8 +383,22 @@ img {
   padding: 96px;
 }
 
+.interested-title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.interested-description {
+  margin: 0;
+  margin-bottom: 54px;
+}
+
 /* Стилизация кнопки "Поиск гостиницы в Седоне" */
 .interested-link {
+  display: block;
+  max-width: 376px;
+  margin: 0 auto;
+  box-sizing: border-box;
   text-align: center;
   background: #756157;
   padding: 8px 50px;
@@ -376,12 +431,15 @@ img {
   font-size: 30px;
   line-height: 36px;
   text-transform: uppercase;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .subscribe-description {
   font-size: 22px;
   line-height: 26px;
-
+  margin: 0;
+  margin-bottom: 54px;
 }
 
 /* email-field decoration */
@@ -394,6 +452,7 @@ img {
   font-size: inherit;
   line-height: 24px;
   border: none;
+  outline: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
 }
@@ -488,6 +547,7 @@ img {
   background-image: url(../images/filter_background.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 50px;
 }
 
 .catalog-content-wrapper {
@@ -591,16 +651,23 @@ img {
 .catalog-content-title {
   display: flex;
   align-items: center;
+  margin-bottom: 40px;
 }
 
 .preview-list {
   display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: 8px;
+  /* max-width: 160px; */
+  margin: 0;
   margin-left: auto;
   list-style: none;
 }
 
 .search-title {
   margin: 0;
+  max-width: 400px;
   margin-right: 200px;
   font-size: 30px;
   line-height: 36px;
@@ -618,12 +685,6 @@ img {
   font-weight: normal;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-}
-
-/* preview button decoration */
-.preview-list {
-  display: flex;
-  gap: 8px;
 }
 
 .preview-item-link {
@@ -686,6 +747,7 @@ img {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   width: 340px;
   box-shadow: 0 0 0 1px #e6e6e6;
   border-radius: 4px;
@@ -827,11 +889,11 @@ img {
 }
 
 .pagination {
-  padding: 0;
   display: flex;
+  flex-wrap: wrap;
+  padding: 0;
   gap: 8px;
   list-style: none;
-
 }
 
 .pagination-link-current {

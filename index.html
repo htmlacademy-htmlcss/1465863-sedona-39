@@ -3,8 +3,9 @@
 
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Седона</title>
+    <title>HTML Academy: Главная</title>
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="icon" href="images/favicon.jpg">
   </head>
 
   <body>
@@ -27,20 +28,20 @@
             </li>
           </ul>
           <ul class="navigation-list navigation-user">
-            <li class="navigation-item magnifier">
-              <a class="navigation-link" href="#">
+            <li class="navigation-user-item">
+              <a class="navigation-user-link magnifier" href="#">
                 <span class="visually-hidden">
                   Поиск
                 </span>
               </a>
             </li>
-            <li class="navigation-item heart">
-              <a class="navigation-link" href="#">
+            <li class="navigation-user-item">
+              <a class="navigation-user-link heart" href="#">
                 <span class="visually-hidden">Количество лайков</span>
                 <span class="like-number">12</span>
               </a>
             </li>
-            <li class="navigation-item">
+            <li class="navigation-item button-want">
               <a class="link-button" href="#">Хочу сюда!</a>
           </ul>
         </nav>
@@ -94,7 +95,9 @@
             </li>
             <li class="advantages-item">
               <div class="devils-bridge">
-                <h2 class="advantages-item-title advantages-common-title side-title">Там есть мост дьявола</h2>
+                <h2 class="advantages-item-title advantages-common-title side-title">Там есть <br>
+                  мост дьявола
+                </h2>
                 <p class="advantages-item-description side-description advantages-common-description">Да, по нему можно
                   пройти! Если вы осмелитесь,
                   разумеется</p>
@@ -115,18 +118,27 @@
           <ul class="experience-list">
             <li class="experience-item house-item">
               <h2 class="experience-item-title advantages-common-title">Жилье</h2>
-              <p class="experience-item-description advantages-common-description">Рекомендуем пожить в настоящем
-                мотеле, всё как в кино!</p>
+              <p class="experience-item-description advantages-common-description">
+                Рекомендуем пожить<br>
+                в настоящем мотеле,<br>
+                всё как в кино!
+              </p>
             </li>
             <li class="experience-item food-item">
               <h2 class="experience-item-title advantages-common-title">Еда</h2>
-              <p class="experience-item-description advantages-common-description">Всегда заказывайте топовый фирменный
-                бургер, вы не разочаруетесь!</p>
+              <p class="experience-item-description advantages-common-description">
+                Всегда заказывайте<br>
+                топовый фирменный бургер,<br>
+                вы не разочаруетесь!
+              </p>
             </li>
             <li class="experience-item gift-item">
               <h2 class="experience-item-title advantages-common-title">Сувениры</h2>
-              <p class="experience-item-description advantages-common-description">Не только китайского, но и настоящего
-                местного производства!</p>
+              <p class="experience-item-description advantages-common-description">
+                Не только китайского,<br>
+                но и настоящего местного<br>
+                производства!
+              </p>
             </li>
           </ul>
         </section>
@@ -141,7 +153,10 @@
         <section class="subscribe" data-test="subscribe">
           <div class="subscribe-wrap">
             <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-            <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+            <p class="subscribe-description">
+              Только полезная информация и никакого спама,<br>
+              честное бойскаутское!
+            </p>
             <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
               <label class="visually-hidden" for="subscribe-email">Ваш e-mail</label>
               <input class="email" type="email" id="subscribe-email" name="user-email" placeholder="Ваш e-mail"
