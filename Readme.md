@@ -2,7 +2,7 @@
 
 * Студент: [Aleksei Pashkan](https://up.htmlacademy.ru/htmlcss/39/user/1465863).
 * Наставник: [Ольга Тюлихова](https://htmlacademy.ru/profile/id523263).
-* Мой проект Cедона https://apashkan.github.io/1465863-sedona-39/
+* Мой проект Cедона [https://apashkan.github.io/1465863-sedona-39/].
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>

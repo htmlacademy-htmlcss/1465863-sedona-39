@@ -50,6 +50,15 @@ img {
   background: #ffffff;
 }
 
+.page-header-logo:hover,
+.page-header-logo:focus {
+  opacity: 0.8;
+}
+
+.page-header-logo:active {
+  opacity: 0.3;
+}
+
 .navigation-link {
   font-family: inherit;
   font-size: 20px;
@@ -58,6 +67,15 @@ img {
   color: #000000;
   text-decoration: none;
   text-align: center;
+}
+
+.navigation-link:hover,
+.navigation-link:focus {
+  color: #756157;
+}
+
+.navigation-link:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .navigation-link-selected {
@@ -114,6 +132,15 @@ img {
 
 .navigation-user-link {
   padding: 22px 12px;
+}
+
+.navigation-user-link:hover,
+.navigation-user-link:focus {
+  opacity: 0.5;
+}
+
+.navigation-user-link:active {
+  opacity: 0.3;
 }
 
 .magnifier {
@@ -177,6 +204,20 @@ img {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 4px;
+}
+
+.link-button:hover,
+.link-button:focus {
+  background-color: #615048;
+}
+
+.link-button:active {
+  background-color: #756157;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.link-button:not([href]) {
+  background: #E5E5E5;
 }
 
 /* main content */
@@ -408,6 +449,7 @@ img {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
+  border-radius: 4px;
 }
 
 .subscribe-wrap {
@@ -457,9 +499,14 @@ img {
   border-bottom-left-radius: 4px;
 }
 
+.email:hover,
+.email:focus {
+  background-color: #E6E6E6;
+}
+
 
 /* Стилизация кнопок "Подписаться" и "Применить" */
-.blue-button {
+.subscribe-button {
   font-family: inherit;
   min-height: 52px;
   font-weight: 700;
@@ -472,6 +519,47 @@ img {
   text-transform: uppercase;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+  cursor: pointer;
+}
+
+.blue-button{
+  cursor: pointer;
+}
+
+.blue-button:hover,
+.blue-button:focus {
+  background-color: #68A2CA;
+}
+
+.blue-button:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.blue-button:disabled {
+  background-color: #E5E5E5;
+}
+
+.card-favorite-villas {
+  cursor: pointer;
+}
+
+.suspension-point {
+  cursor: pointer;
+}
+
+.card-favorite-villas:hover,
+.card-favorite-villas:focus {
+  background-color: #6C9E42;
+}
+
+.card-favorite-villas:active {
+  background-color: #7DB54F;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.card-favorite-villas:disabled {
+  background-color: #E5E5E5;
 }
 
 .subscribe-form {
