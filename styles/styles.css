@@ -80,7 +80,7 @@ img {
 
 .navigation-link-selected {
   text-decoration: underline;
-  text-decoration-color:  #756257;
+  text-decoration-color: #756257;
   text-underline-offset: 24px;
 }
 
@@ -522,7 +522,7 @@ img {
   cursor: pointer;
 }
 
-.blue-button{
+.blue-button {
   cursor: pointer;
 }
 
@@ -582,48 +582,58 @@ img {
 .social-list {
   display: flex;
   flex-wrap: wrap;
+  min-width: 142px;
+  align-items: center;
   padding: 0;
   margin: 0;
   list-style: none;
+
 }
 
-.social-item {
-  padding: 13px 12px;
-}
-
-.phone-number {
-  font-size: 40px;
-  line-height: 40px;
-  text-align: center;
-  color: #000000;
-  text-decoration: none;
-}
 
 /* Social networks */
 
 .social-link {
-  display: inline-block;
+  position: relative;
   text-decoration: none;
-  width: 20px;
-  height: 20px;
+  display: block;
+  box-sizing: border-box;
+  min-width: 48px;
+  min-height: 40px;
+  padding: 12px;
+
 }
 
-.vkontakte {
-  background-image: url(../images/vkontakte.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.social-item {
+  position: relative;
 }
 
-.telegram {
-  background-image: url(../images/telegram.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.social-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: 0 auto;
+  fill: #83B3D3;
 }
 
-.youtube {
-  background-image: url(../images/youtube.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+.social-link:hover path,
+.social-link:focus path {
+  fill: #68A2CA;
+}
+
+.social-link:active path {
+  fill: rgba(104, 162, 202, 0.3);
+}
+
+.footer-contacts:hover path,
+.footer-contacts:focus path {
+  fill: #756157;
+}
+
+.footer-contacts:active path {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 
@@ -658,23 +668,67 @@ img {
   gap: 11px;
   align-items: center;
   list-style: none;
+  position: relative;
 }
 
 .breadcrumbs-home {
+  display: block;
   background-image: url(../images/breadcrumbs-home.svg);
   background-repeat: no-repeat;
   background-position: center;
-  width: 13px;
-  height: 15px;
+  min-width: 12px;
+  min-height: 12px;
 }
+
+.breadcrumbs-item {
+  margin-right: 28px;
+}
+
+
+.breadcrumbs-link:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link:focus {
+  color: #FFFFFF;
+}
+
+.breadcrumbs-link:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-item:first-child::after {
+  visibility: hidden;
+}
+
+/* Не работает!!! ПЕРЕСМОТРЕТЬ КАСТ */
+.breadcrumbs-item::after {
+  position: absolute;
+  content: "";
+  background-image: url('../images/breadcrumbs-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  margin-right: 10px;
+  top: 2px;
+  left: 30px;
+  width: 8px;
+  height: 20px;
+}
+
 
 .breadcrumbs-list {
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   list-style: none;
+  padding: 0;
 }
 
 .breadcrumbs-link {
   font-size: 16px;
+  cursor: pointer;
 }
 
 .catalog-filter {
@@ -693,13 +747,11 @@ img {
 
 .price-range {
   margin: 0;
+  padding: 0;
   margin-left: 70px;
-  /* Раскоментировать после стилизация полей ввода */
-  /* margin-right: 70px; */
   border: none;
   width: 288px;
 }
-
 
 .price-buttons {
   display: flex;
@@ -727,7 +779,7 @@ img {
   margin-bottom: 16px;
 }
 
-.catalog-filter-item:last-child{
+.catalog-filter-item:last-child {
   margin-bottom: 0;
 }
 
@@ -737,20 +789,136 @@ img {
 }
 
 .catalog-content-title {
+  position: relative;
   display: flex;
   align-items: center;
   margin-bottom: 40px;
 }
 
-.preview-list {
-  display: flex;
-  flex-wrap: wrap;
+.range-wrapper-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 2px;
+  margin-bottom: 48px;
+}
+
+.label-price-range {
+  padding-top: 12px;
+  position: absolute;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+  opacity: 0.3;
+}
+
+/* НАКАЛХОЗИЛ КАК УБРАТЬ?????? */
+.min-label {
+  padding-left: 106px;
+}
+
+.max-label {
+  padding-left: 103px;
+}
+
+
+.range-input {
+  appearance: textfield;
+  font-family: inherit;
   box-sizing: border-box;
-  gap: 8px;
-  /* max-width: 160px; */
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 20px;
+  width: 100%;
+  max-height: 48px;
+  color: #000000;
+  background-color: #f2f2f2;
+
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.range-input:hover,
+.range-input:focus {
+  background-color: #e6e6e6;
+}
+.range-input:focus {
+  outline: 3px solid #83B3D3;
+}
+
+.range-input-max {
+  border-radius: 0 4px 4px 0;
+}
+
+/* Скрывает стрелочки внутри инпута с диапазоном цен */
+.range-input::-webkit-outer-spin-button,
+.range-input::-webkit-inner-spin-button {
+  appearance: none;
   margin: 0;
-  margin-left: auto;
-  list-style: none;
+}
+
+.range-scale {
+  position: relative;
+  height: 4px;
+  background-color: #6E7576;
+}
+
+.range-bar {
+  position: absolute;
+  height: 4px;
+  background-color: #FFFFFF;
+}
+
+.range-toggle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+}
+
+.range-toggle:hover {
+  background-color: #FFFFFF;
+  border: none;
+}
+
+.range-toggle:focus,
+.range-toggle:active {
+  outline: 3px solid #83B3D3;
+}
+
+.toggle-min {
+  top: -8px;
+  left: 0;
+}
+
+.toggle-max {
+  top: -8px;
+  left: 206px;
+}
+
+.filter-button {
+  font-family: inherit;
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 16px;
+  text-transform: uppercase;
+  background-color: #82B3D3;
+  border: none;
+  padding: 8px 50px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reset-button:hover {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.reset-button:active {
+  color: #FFFFFF4D;
 }
 
 .search-title {
@@ -766,13 +934,45 @@ img {
 
 .search-control {
   font-family: inherit;
-  padding: 14px 20px;
+  min-height: 49px;
+  padding: 10px 18px;
   width: 292px;
   font-size: 18px;
   line-height: 21px;
   font-weight: normal;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
+  appearance: none;
+  background-image: url('../images/selector-arrow.svg');
+  background-repeat: no-repeat;
+  background-position: right 18px center;
+}
+
+.search-control:hover,
+.search-control:focus {
+  border: 2px solid #68A2CA;
+}
+
+.search-control:disabled {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: rgba(0, 0, 0, 0.3);
+
+}
+
+
+.preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 160px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  list-style: none;
+}
+
+.preview-item {
+  box-sizing: border-box;
 }
 
 .preview-item-link {
@@ -780,11 +980,29 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   color: #000000;
-  border: 2px solid #E5E5E5;;
+  border: 2px solid #E5E5E5;
   border-radius: 4px;
-  width: 48px;
-  height: 48px;
+  min-width: 48px;
+  min-height: 48px;
+  box-sizing: border-box;
 }
+
+.preview-item-selected {
+  border: 2px solid #000000;
+}
+
+.preview-item-link:hover {
+  border: 2px solid #000000;
+}
+
+.preview-item-link:focus {
+  border: 2px solid #68A2CA;
+}
+
+.preview-item-link:active {
+  border: 2px solid #000000;
+}
+
 
 .tile {
   background-image: url(../images/tile.svg);
@@ -809,18 +1027,11 @@ img {
   color: #ffffff;
 }
 
-/* Карточки на флексах */
-/* .card-list {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 0;
-  list-style: none;
-  gap: 20px;
-} */
 
 /* Карточки на гридах */
 .card-list {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(3, 340px);
   padding: 0;
   margin: 0;
@@ -830,18 +1041,17 @@ img {
   padding-bottom: 40px;
 }
 
-/* карточка на флексах */
- .card-item {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  width: 340px;
-  box-shadow: 0 0 0 1px #e6e6e6;
-  border-radius: 4px;
-  padding: 20px;
-  box-sizing: border-box;
+
+.card-list::after {
+  position: absolute;
+  content: "";
+  height: 1px;
+  background-color: #E6E6E6;
+  width: 100%;
+  top: 100%;
 }
+
+
 
 /* Карточка на гридах */
 .card-item {
@@ -856,6 +1066,14 @@ img {
   border-radius: 4px;
 }
 
+.card-image {
+  display: block;
+}
+
+.card-image:hover {
+  opacity: 0.8;
+}
+
 
 .card-title {
   margin-bottom: 0;
@@ -863,6 +1081,15 @@ img {
   line-height: 28px;
   font-weight: 700;
   color: #000000;
+}
+
+.card-title:hover,
+.card-title:focus-visible {
+  color: #756157;
+}
+
+.card-title:active {
+  color: rgba(117, 97, 87, 0.3);
 }
 
 .card-price {
