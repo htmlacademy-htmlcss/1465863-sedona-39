@@ -262,7 +262,64 @@
           </a>
       </footer>
     </div>
+    <div class="modal-container modal-container-close">
+      <div class="modal modal-auth">
+        <button class="modal-close-button" type="button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+      <section class="modal-content">
+        <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+        <form class="auth-form" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="date-container">
+            <label for="checkin" class="form-label">Дата Заезда:</label>
+            <input class="input-date" type="text" name="checkin-date" id="checkin" placeholder="Укажите дату" value="27 апреля 2020" required>
+            <button class="button-calendar" type="button"></button>
+            <p class="hint-message warning-message">Мы не можем отправить вас в прошлое.</p>
+          </div>
+          <div class="date-container">
+            <label for="checkout" class="form-label">Дата Выезда:</label>
+            <input class="input-date" type="text" name="checkout-date" id="checkout" placeholder="Укажите дату" value="1 сентября 2021" required>
+            <button class="button-calendar" type="button"></button>
+            <p class="hint-message">На эти даты есть свободные номера. Пока есть.</p>
+          </div>
+          <div class="guest">
+            <div class="guest-wrap adult">
+              <label class="form-label adult-label">Взрослые:</label>
+              <div class="count-wrapper">
+                <button class="button-guest-count minus-button" type="button"></button>
+                <span class="visually-hidden">кнопка уменьшающая количество взрослых</span>
+                <input class="guest-count-input" type="text" name="adult-count-input" value="2" required>
+                <button class="button-guest-count plus-button" type="button"></button>
+                <span class="visually-hidden">кнопка увеличивающая количетво взрослых</span>
+              </div>
+            </div>
+            <div class="guest-wrap kids">
+              <span class="form-label-wrap">
+              <label class="form-label kid-label">Дети:</label>
+              <span class="tooltip">
+                <button class="tooltip-toggle" type="button"></button>
+                <span class="tooltip-text" role="tooltip" id="tooltip-label-children"> Укажите количество детей,
+                  которые будут с вами, возраст которых от 6 до
+                  18 лет. Дети до 6 лет размещаются бесплатно.
+                </span>
+              </span>
+            </span>
+              <div class="count-wrapper">
+                <button class="button-guest-count minus-button" type="button"></button>
+                <span class="visually-hidden">кнопка уменьшающая количество детей</span>
+                <input class="guest-count-input" type="text" name="kid-count-input" value="2" required>
+                <button class="button-guest-count plus-button" type="button"></button>
+                <span class="visually-hidden">кнопка увеличивающая количетво детей</span>
+              </div>
+            </div>
+          </div>
+          <button class="blue-button button-find" type="submit">Найти</button>
+        </form>
+      </section>
+      </div>
     </div>
+
+
   </body>
 
 </html>
