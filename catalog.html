@@ -56,8 +56,8 @@
                   <span class="visually-hidden">На главную страницу</span>
                 </a>
               </li>
-              <li class="breadcrumbs-item" aria-current="page">
-                <a class="breadcrumbs-link">
+              <li class="breadcrumbs-item">
+                <a class="breadcrumbs-link" href="#" aria-current="page">
                   Гостиницы
                 </a>
               </li>
@@ -71,20 +71,32 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="controls" for="pool">
-                      <input class="control-input" type="checkbox" name="pool" id="pool" checked>
-                      Бассейн
+                      <input class="control-input control-checkbox visually-hidden" type="checkbox" name="pool"
+                        id="pool" checked>
+                      <span class="control-mark control-mark-checkbox"></span>
+                      <span class="control-label">
+                        Бассейн
+                      </span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="controls" for="parking">
-                      <input class="control-input" type="checkbox" name="parking" id="parking" checked>
-                      Парковка
+                      <input class="control-input control-checkbox visually-hidden" type="checkbox" name="parking"
+                        id="parking" checked>
+                      <span class="control-mark control-mark-checkbox"></span>
+                      <span class="control-label">
+                        Парковка
+                      </span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="controls" for="wifi">
-                      <input class="control-input" type="checkbox" name="wifi" id="wifi">
-                      Wi-Fi
+                      <input class="control-input control-checkbox visually-hidden" type="checkbox" name="wifi"
+                        id="wifi">
+                      <span class="control-mark control-mark-checkbox"></span>
+                      <span class="control-label">
+                        Wi-Fi
+                      </span>
                     </label>
                   </li>
                 </ul>
@@ -94,22 +106,31 @@
                 <ul class="catalog-filter-list">
                   <li class="catalog-filter-item">
                     <label class="controls" for="hotel">
-                      <input class="control-input" type="radio" name="accomodation_type" id="hotel" value="hotel"
-                        checked>
-                      Гостиница
+                      <input class="control-input control-radio visually-hidden" type="radio" name="accomodation_type"
+                        id="hotel" value="hotel" checked>
+                      <span class="control-mark control-mark-radio"></span>
+                      <span class="control-label">
+                        Гостиница</span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="controls" for="motel">
-                      <input class="control-input" type="radio" name="accomodation_type" id="motel" value="motel">
-                      Мотель
+                      <input class="control-input control-radio visually-hidden" type="radio" name="accomodation_type"
+                        id="motel" value="motel">
+                      <span class="control-mark control-mark-radio"></span>
+                      <span class="control-label">
+                        Мотель
+                      </span>
                     </label>
                   </li>
                   <li class="catalog-filter-item">
                     <label class="controls" for="appartment">
-                      <input class="control-input" type="radio" name="accomodation_type" id="appartment"
-                        value="appartment">
-                      Апартаменты
+                      <input class="control-input control-radio visually-hidden" type="radio" name="accomodation_type"
+                        id="appartment" value="appartment">
+                      <span class="control-mark control-mark-radio"></span>
+                      <span class="control-label">
+                        Апартаменты
+                      </span>
                     </label>
                   </li>
                 </ul>
@@ -122,7 +143,7 @@
                   <div class="price-area-input">
                     <label class="catalog-filter-label">
                       <span class="label-price-range min-label">
-                      от
+                        от
                       </span>
                       <input class="range-input range-input-min" type="number" name="min-price" value="0"
                         placeholder="0" required>
@@ -142,7 +163,7 @@
                 </div>
                 <div class="range">
                   <div class="range-scale">
-                    <div class="range-bar" style="left: 0; width: 226px">
+                    <div class="range-bar" style="left: 0; width: 227px">
                       <button type="button" class="range-toggle toggle-min">
                         <button type="button" class="range-toggle toggle-max"></button>
                       </button>
@@ -189,6 +210,8 @@
                 <a class="card-link" href="#">
                   <img class="card-image" src="images/amara_resort.jpg" width="300" height="212"
                     alt="Amara Resort & Spa picture">
+                </a>
+                <a class="card-link" href="#">
                   <h3 class="card-title">Amara Resort & Spa</h3>
                 </a>
                 <!-- <div class="hotel-price-container"> -->
@@ -208,6 +231,8 @@
                 <a class="card-link" href="#">
                   <img class="card-image" src="images/villas_at_poco_diablo.jpg" width="300" height="212"
                     alt="Villas at Poco Diablo picture">
+                </a>
+                <a class="card-link" href="#">
                   <h3 class="card-title">Villas at Poco Diablo</h3>
                 </a>
                 <!-- <div class="hotel-price-container"> -->
@@ -227,6 +252,8 @@
                 <a class="card-link" href="#">
                   <img class="card-image" src="images/desert_quail_inn.jpg" width="300" height="212"
                     alt="Desert Quail Inn picture">
+                </a>
+                <a class="card-link" href="#">
                   <h3 class="card-title">Desert Quail Inn</h3>
                 </a>
                 <!-- <div class="hotel-price-container"> -->
@@ -246,6 +273,8 @@
                 <a class="card-link" href="#">
                   <img class="card-image" src="images/green_tree_inn.jpg" width="300" height="212"
                     alt="GreenTree Inn picture">
+                </a>
+                <a class="card-link" href="#">
                   <h3 class="card-title">GreenTree Inn</h3>
                 </a>
                 <!-- <div class="hotel-price-container"> -->

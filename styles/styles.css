@@ -474,7 +474,7 @@ img {
   line-height: 36px;
   text-transform: uppercase;
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 21px;
 }
 
 .subscribe-description {
@@ -499,11 +499,13 @@ img {
   border-bottom-left-radius: 4px;
 }
 
-.email:hover,
-.email:focus {
+.email:hover {
   background-color: #E6E6E6;
 }
 
+.email:focus {
+  outline: 3px solid #83B3D3;
+}
 
 /* Стилизация кнопок "Подписаться" и "Применить" */
 .subscribe-button {
@@ -572,11 +574,11 @@ img {
 .footer-container {
   margin: 0 auto;
   width: 1060px;
-  padding-top: 40px;
+  padding-top: 44px;
   padding-bottom: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 .social-list {
@@ -588,6 +590,10 @@ img {
   margin: 0;
   list-style: none;
 
+}
+
+.phone-number {
+  margin-top: 7px;
 }
 
 
@@ -608,7 +614,7 @@ img {
   position: relative;
 }
 
-.social-icon {
+/* .social-icon {
   position: absolute;
   top: 0;
   right: 0;
@@ -616,7 +622,7 @@ img {
   left: 0;
   margin: 0 auto;
   fill: #83B3D3;
-}
+} */
 
 .social-link:hover path,
 .social-link:focus path {
@@ -665,10 +671,9 @@ img {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
-  gap: 11px;
+
   align-items: center;
   list-style: none;
-  position: relative;
 }
 
 .breadcrumbs-home {
@@ -681,16 +686,19 @@ img {
 }
 
 .breadcrumbs-item {
-  margin-right: 28px;
+  margin-right: 29px;
+  position: relative;
+}
+
+.breadcrumbs-link {
+  font-size: 16px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 
 .breadcrumbs-link:hover {
   opacity: 0.6;
-}
-
-.breadcrumbs-link:focus {
-  color: #FFFFFF;
 }
 
 .breadcrumbs-link:active {
@@ -701,7 +709,6 @@ img {
   visibility: hidden;
 }
 
-/* Не работает!!! ПЕРЕСМОТРЕТЬ КАСТ */
 .breadcrumbs-item::after {
   position: absolute;
   content: "";
@@ -709,10 +716,9 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
-
   margin-right: 10px;
-  top: 2px;
-  left: 30px;
+  top: 1px;
+  left: -18px;
   width: 8px;
   height: 20px;
 }
@@ -739,11 +745,48 @@ img {
 }
 
 .catalog-filter-group {
+  margin: 0;
   padding: 0;
   margin-right: 70px;
   min-width: 150px;
   border: none;
 }
+
+.catalog-filter-label {
+  position: relative;
+}
+
+/* .checkbox-list {
+  display: block;
+  position: relative;
+}
+
+.control-checkbox {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+.control-label {
+  padding-left: 36px;
+}
+
+.control-radio-list {
+  display: block;
+  position: relative;
+}
+
+.control-radio {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+} */
+
+
 
 .price-range {
   margin: 0;
@@ -757,11 +800,14 @@ img {
   display: flex;
   flex-direction: column;
   margin-left: auto;
-  justify-content: space-around;
+  width: 191px;
+  gap: 32px;
+  margin-top: 55px;
 }
 
 
 .catalog-filter-title {
+  padding: 0;
   margin-bottom: 32px;
   font-size: 20px;
   line-height: 24px;
@@ -777,6 +823,9 @@ img {
 
 .catalog-filter-item {
   margin-bottom: 16px;
+  font-size: 18px;
+  line-height: 23px;
+  color: #FFFFFF;
 }
 
 .catalog-filter-item:last-child {
@@ -784,8 +833,65 @@ img {
 }
 
 .controls {
-  font-size: 18px;
-  line-height: 23px;
+  display: block;
+  position: relative;
+  padding-left: 36px;
+  cursor: pointer;
+}
+
+.controls:hover {
+  opacity: 0.6;
+}
+
+.controls:active {
+  opacity: 0.3;
+}
+
+.control-input:focus + .control-mark {
+  outline: 3px solid #83b3d3;
+}
+
+.controls:has(.control-input:disabled) {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.control-mark {
+  position: absolute;
+  top: 1px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #FFFFFF;
+}
+
+.control-checkbox:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-image: url('../images/tick-mark.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.control-mark-checkbox {
+  border-radius: 4px;
+}
+
+.control-mark-radio {
+  border-radius: 50%;
+}
+
+.control-radio:checked + .control-mark::before {
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background-color: #3f5e72;
+  border-radius: 50%;
 }
 
 .catalog-content-title {
@@ -799,27 +905,22 @@ img {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 2px;
-  margin-bottom: 48px;
+  margin-bottom: 43px;
 }
 
 .label-price-range {
-  padding-top: 12px;
+  right: 20px;
   position: absolute;
   font-family: inherit;
   font-size: 18px;
   line-height: 24px;
   color: #000000;
   opacity: 0.3;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-/* НАКАЛХОЗИЛ КАК УБРАТЬ?????? */
-.min-label {
-  padding-left: 106px;
-}
 
-.max-label {
-  padding-left: 103px;
-}
 
 
 .range-input {
@@ -843,6 +944,7 @@ img {
 .range-input:focus {
   background-color: #e6e6e6;
 }
+
 .range-input:focus {
   outline: 3px solid #83B3D3;
 }
@@ -883,6 +985,7 @@ img {
 .range-toggle:hover {
   background-color: #FFFFFF;
   border: none;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
 }
 
 .range-toggle:focus,
@@ -891,13 +994,15 @@ img {
 }
 
 .toggle-min {
-  top: -8px;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
 }
 
 .toggle-max {
-  top: -8px;
-  left: 206px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
 }
 
 .filter-button {
@@ -946,6 +1051,7 @@ img {
   background-image: url('../images/selector-arrow.svg');
   background-repeat: no-repeat;
   background-position: right 18px center;
+  cursor: pointer;
 }
 
 .search-control:hover,
@@ -1035,7 +1141,8 @@ img {
   grid-template-columns: repeat(3, 340px);
   padding: 0;
   margin: 0;
-  gap: 20px;
+  row-gap: 21px;
+  column-gap: 20px;
   list-style: none;
   margin-bottom: 40px;
   padding-bottom: 40px;
@@ -1076,7 +1183,7 @@ img {
 
 
 .card-title {
-  margin-bottom: 0;
+  margin: 0;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -1199,7 +1306,7 @@ img {
   font-size: 20px;
   line-height: 36px;
   border-radius: 4px;
-  padding: 10px;
+  padding: 11px;
   box-sizing: border-box;
 }
 
@@ -1209,6 +1316,7 @@ img {
   padding: 0;
   gap: 8px;
   list-style: none;
+  margin-bottom: 58px;
 }
 
 .pagination-link-current {
