@@ -44,13 +44,6 @@ body {
           box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-}
-
 .wrapper {
   margin: 0 auto;
   width: 1200px;
